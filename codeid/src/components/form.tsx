@@ -3,7 +3,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router";
 import {ButtonEdit, ButtonRed} from "../../src/components/button"
-
+import {openToast, fireText } from "../../src/service/swalConfirm"
 interface IForm {
     info?: Contact
     onClickCancel?: () => void
@@ -28,13 +28,17 @@ interface IForm {
         axios.put(`https://simple-contact-crud.herokuapp.com/contact/${props.info?.id}`, dataForm)
         .then(() => {
           if(props.info){
-            window.location.reload(false)
+            openToast("success", "loading.......")
+            setTimeout(() => {
+              window.location.reload(false)
+            },3000)
           }else{
             Router.push("/")
           }
         })
         .catch((error) => {
           console.error(error)
+          fireText("looks like something went wrong", "error")
         })
       }else{
         axios.post(`https://simple-contact-crud.herokuapp.com/contact`, dataForm)
@@ -47,6 +51,7 @@ interface IForm {
         })
         .catch((error) => {
           console.error(error)
+          fireText("looks like something went wrong", "error")
         })
       }
     }
