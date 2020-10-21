@@ -1,0 +1,33 @@
+.containerNav {
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+  height: 72px;
+  left: 0;
+  background-color: #ffffff;
+  color: #109dc8;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  align-items: center;
+  font-size: 25px;
+}
+
+.addContact {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .addContact {
+    display: flex;
+    font-size: 15px;
+    color: #fd8913;
+  }
+  .yourContact {
+    font-size: 24px;
+  }
+  .containerNav {
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+}

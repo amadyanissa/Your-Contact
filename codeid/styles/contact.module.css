@@ -1,0 +1,94 @@
+.containerContact {
+  display: flex;
+  width: 100%;
+}
+
+.outerConteiner {
+  width: 512px;
+  height: 100px;
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px;
+  align-items: center;
+  box-shadow: -2px 2px 1px 1px rgba(32, 33, 36, 0.28);
+  transition: transform 0.4s;
+}
+
+.outerConteiner:active {
+  box-shadow: none;
+}
+.outerConteiner:hover {
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+.name {
+  color: #666666;
+  font-weight: bolder;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+.innerContact {
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.nameEmergency {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.innerContact a {
+  font-size: 20px;
+}
+
+.addRemove {
+  width: 50%;
+  display: flex;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.add {
+  background-color: #00a5df;
+  color: white;
+}
+
+.add:hover {
+  background-color: white;
+  color: #00a5df;
+}
+
+.remove {
+  background-color: #dc3545;
+  color: white;
+}
+
+.remove:hover {
+  color: #dc3545;
+  background-color: white;
+}
+@media (max-width: 600px) {
+  .outerConteiner {
+    width: unset !important;
+    flex-direction: column;
+  }
+
+  .containerContact {
+    width: 100%;
+  }
+
+  .innerContact {
+    margin-left: 10px;
+  }
+  .innerContact a {
+    max-width: 80%;
+  }
+
+  .add {
+    width: 100% !important;
+  }
+}

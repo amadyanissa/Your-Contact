@@ -1,0 +1,105 @@
+.innerDetail {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 512px;
+  min-height: 600px;
+  border-radius: 4px;
+}
+
+.avatarSection {
+  display: flex;
+  height: 272px;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  background-color: #fd8204;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatarSection div {
+  margin-top: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.avatarSection span {
+  color: white;
+  font-size: 16px;
+}
+
+.editAndDelete {
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.preEdit {
+  height: 81px;
+  align-items: center;
+}
+
+.postEdit {
+  margin-top: 20px;
+}
+.editDeleteButton {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  box-shadow: -2px 2px 1px 1px rgba(32, 33, 36, 0.28);
+}
+
+.edit {
+  border: 2px solid #009bd2;
+}
+
+.edit:hover {
+  background-color: #009bd2;
+  cursor: pointer;
+  color: white;
+}
+
+.edit:active {
+  background-color: white;
+  color: #009bd2;
+}
+
+.delete {
+  border: 2px solid #dc3545;
+}
+
+.delete:hover {
+  background-color: #dc3545;
+  cursor: pointer;
+  color: white;
+}
+
+.delete:active {
+  background-color: white;
+  color: #dc3545;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .innerDetail {
+    width: 100%;
+    flex-direction: column;
+    margin: 100px 0;
+  }
+}
