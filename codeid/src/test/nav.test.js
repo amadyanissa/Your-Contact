@@ -6,8 +6,11 @@ import MyApp from "../../pages/_app"
 import { render,
   fireEvent,
 } from "@testing-library/react"
+import renderer from 'react-test-renderer';
 
-it("renders navbar without crashing", () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-})
+describe('Navbar testing', () => {
+  it('correctly renders', () => {
+    const wrapper = shallow(<Nav />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
